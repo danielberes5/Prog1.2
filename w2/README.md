@@ -1,0 +1,1 @@
+In order to make the main.cpp-s work, you will need the files from /res/GUI/
