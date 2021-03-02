@@ -115,5 +115,5 @@ catch(...) {
 }
 
 /* Compile command
-g++ -w -Wall -std=c++11 GUI/Graph.cpp GUI/Window.cpp GUI/GUI.cpp GUI/Simple_window.cpp ex01_many_shapes.cpp `fltk-config --ldflags --use-images` -o a.out
+g++ -w -Wall -std=c++11 Graph.cpp Window.cpp GUI.cpp Simple_window.cpp main.cpp `fltk-config --ldflags --use-images` -o a.out
 */
