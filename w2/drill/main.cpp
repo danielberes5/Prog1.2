@@ -1,8 +1,8 @@
 /*
-    g++ main.cpp Graph.cpp Window.cpp GUI.cpp Simple_window.cpp -o main `fltk-config --ldflags --use-images`
+    g++ -std=c++11 main.cpp ../../res/GUI/Graph.cpp ../../res/GUI/Window.cpp ../../res/GUI/GUI.cpp ../../res/GUI/Simple_window.cpp -o a.out `fltk-config --ldflags --use-images`
 */
-#include "Simple_window.h"
-#include "Graph.h"
+#include "../../res/GUI/Simple_window.h"
+#include "../../res/GUI/Graph.h"
 
 
 int main()
@@ -43,7 +43,7 @@ int main()
     t.set_font(Font::times_bold);
     t.set_font_size(20);
 
-    Image ii {Point{100,50},"badge.jpg"};
+    Image ii {Point{100,50},"../../res/GUI/badge.jpg"};
 
     Circle c {Point{100,200},50};
     Mark m {Point{100,200},'x'};

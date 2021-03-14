@@ -96,10 +96,22 @@ private:
 
 struct Smiley_hat : Smiley {
     Smiley_hat(Point p, int r);
+
     void draw_lines () const;
 
 private:
     Rectangle hat;
+};
+
+// Ex 11 - Binary_tree
+
+struct Binary_tree : Shape {
+    Binary_tree(Point p, int levels);
+    int number_of_nodes() const { return nodes.size(); }
+private:
+    vector<Point> nodes;
+    int r = 25;
+    int l;
 };
 
 struct Frowny_hat : Frowny {
@@ -111,27 +123,4 @@ private:
     Polygon hat;
 };
 
-// Ex 14 11 - Binary_tree
-
-struct Binary_tree : Shape {
-    Binary_tree(Point p, int levels, string edge_style = "normal");
-    int number_of_nodes() const { return nodes.size(); }
-
-    virtual void draw_lines () const;
-    int levels() const { return l; }
-    void set_node_label(string n, string l);
-protected:
-    vector<Point> nodes;
-    Vector_ref<Shape> edges;
-    Vector_ref<Text> labels;
-    int r = 15;
-    int l;
-};
-
-struct Binary_tree_squares : Binary_tree {
-    Binary_tree_squares(Point p, int levels, string edge_style)
-        : Binary_tree(p,levels,edge_style) { }
-    void draw_lines() const;
-private:
-};
 

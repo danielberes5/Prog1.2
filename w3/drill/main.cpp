@@ -1,5 +1,5 @@
-#include "Simple_window.h"
-#include "Graph.h"
+#include "../../res/GUI/Simple_window.h"
+#include "../../res/GUI/Graph.h"
 
 #include <string>
 #include <iostream>
@@ -44,9 +44,9 @@ try {
     win.wait_for_button();
 
     // 4. Add 3 copies of a 200x200 image
-    Image cpp1 {Point{0,300}, "cpp.jpg"};
-    Image cpp2 {Point{300,600}, "cpp.jpg"};
-    Image cpp3 {Point{500,100}, "cpp.jpg"};
+    Image cpp1 {Point{0,300}, "../../res/GUI/cpp.jpg"};
+    Image cpp2 {Point{300,600}, "../../res/GUI/cpp.jpg"};
+    Image cpp3 {Point{500,100}, "../../res/GUI/cpp.jpg"};
 
     win.attach(cpp1);
     win.attach(cpp2);
@@ -54,7 +54,7 @@ try {
     win.wait_for_button();
 
     // 5. Add a 100x100 image and make it move when next is pressed
-    Image logo {Point{0,0}, "apple-logo.jpg"};
+    Image apple {Point{0,0}, "../../res/GUI/apple-logo.jpg"};
     win.attach(apple);
     win.wait_for_button();
 
@@ -76,5 +76,5 @@ catch(...) {
     return 2;
 }
 /* Compile command
-g++ -w -Wall -std=c++11 Graph.cpp Window.cpp GUI.cpp Simple_window.cpp main.cpp `fltk-config --ldflags --use-images` -o a.out
+g++ -w -Wall -std=c++11 ../../res/GUI/Graph.cpp ../../res/GUI/Window.cpp ../../res/GUI/GUI.cpp ../../res/GUI/Simple_window.cpp main.cpp `fltk-config --ldflags --use-images` -o a.out
 */
